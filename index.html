@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Math Game</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        canvas {
+            border: 1px solid white;
+            background-color: black;
+            background-image: linear-gradient(white 1px, transparent 1px), linear-gradient(to right, white 1px, black 1px);
+            background-size: 20px 20px;
+        }
+        #math-problem {
+            margin-top: 20px;
+            font-size: 24px;
+            color: white;
+        }
+        #restart {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <div id="math-problem"></div>
+    <button id="restart" onclick="restartGame()">Restart Game</button>
+    <audio id="gameTune" loop>
+        <source src="game-tune.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script src="snakeGame.js"></script>
+</body>
+</html>
